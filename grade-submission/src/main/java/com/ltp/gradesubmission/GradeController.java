@@ -25,4 +25,10 @@ public class GradeController {
         return "grades";
     }
 
+    @GetMapping("/form")
+    public String gradeForm(Model model){
+        model.addAttribute("grade", new Grade("happy potter", "Potions and magic", "C-", 20));
+        return "form";
+    }
+
 }
