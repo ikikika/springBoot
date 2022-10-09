@@ -4,6 +4,14 @@ public class Grade {
     private String name;
     private String subject;
     private String score;
+    private Number age;
+
+    public Grade(String name, String subject, String score, Number age) {
+        this.name = name;
+        this.subject = subject;
+        this.score = score;
+        this.age = age;
+    }
 
     public Grade(String name, String subject, String score) {
         this.name = name;
@@ -36,6 +44,14 @@ public class Grade {
 
     public void setScore(String score) {
         this.score = score;
+    }
+
+    public Number getAge() {
+        return this.age;
+    }
+
+    public void setAge(Number age) {
+        this.age = age;
     }
 
 }

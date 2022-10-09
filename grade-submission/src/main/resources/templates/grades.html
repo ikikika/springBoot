@@ -129,6 +129,11 @@
           <td th:text="*{score}"></td>
         </tr>
       </table>
+
+      <p th:if="${first.age > 22}">Age is below 22</p>
+      <p th:unless="${first.age > 22}">Age is not below 22</p>
+
+      <p th:text="${first.age > 22} ? 'Age is below 22' : 'Age is not below 22'"></p>
     </div>
   </body>
 </html>
