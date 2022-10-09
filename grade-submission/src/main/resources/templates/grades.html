@@ -102,6 +102,10 @@
       body {
         background: #263238;
       }
+
+      p {
+        color: #fff;
+      }
     </style>
   </head>
   <body>
@@ -133,7 +137,12 @@
       <p th:if="${first.age > 22}">Age is below 22</p>
       <p th:unless="${first.age > 22}">Age is not below 22</p>
 
-      <p th:text="${first.age > 22} ? 'Age is below 22' : 'Age is not below 22'"></p>
+      <p
+        th:text="${first.age > 22} ? 'Age is below 22' : 'Age is not below 22'"
+      ></p>
+
+      <p th:text="${#strings.contains(first.subject, 'magic')}"></p>
+
     </div>
   </body>
 </html>
