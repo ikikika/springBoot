@@ -22,6 +22,7 @@
           <td th:text="${grade.name}"></td>
           <td th:text="${grade.subject}"></td>
           <td th:text="${grade.score}"></td>
+          <td><a role="button" class="update" th:href="@{/form(name = ${grade.name})}">Update</a></td>
         </tr>
       </table>
 
@@ -33,7 +34,6 @@
       ></p>
 
       <p th:text="${#strings.contains(first.subject, 'magic')}"></p>
-
     </div>
   </body>
 </html>
